@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Growth Tracker</title>
+  <link href="./style.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/series-label.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+  <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+</head>
+
+<body>
+  <main>
+    <h1 id="title">Growth Tracker</h1>
+    <div id="input-wrapper">
+      <div class="items">
+        <input placeholder="Enter Your Profit/Salary" type="number" id="profit" />
+      </div>
+      <div class="items">
+        <input placeholder="Enter Year" type="number" id="year" />
+      </div>
+    </div>
+    <div id="button-wrapper">
+      <button id="submit" class="submit">Submit</button>
+      <button id="export" class="export">Export</button>
+    </div>
+    <div id="chart-wrapper">
+      <div id="chart-container"></div>
+    </div>
+    <div id="chart-wrapper">
+      <div id="no-data"></div>
+    </div>
+
+    <div id="export-modal">
+      <div id="export-modal-content">
+        <p>Select your export type</p>
+        <div>
+          <div class="export-type-section">
+            <input type="radio" id="all-data" name="export-data" value="All data" />
+              <label for="all-data">All data</label>
+          </div>
+          <div class="export-type-section">
+            <input type="radio" id="data-without-salary" name="export-data" value="Data without salary" />
+            <label for="data-without-salary">Data without salary</label>
+          </div>
+          <div class="export-type-section">
+            <input type="radio" id="no-data" name="export-data" value="No data" />
+              <label for="no-data">No data</label>
+          </div>
+        </div>
+        <button id="download">Download</button>
+      </div>
+    </div>
+  </main>
+</body>
+<script src="./index.js"></script>
+
+</html>
